@@ -1,0 +1,17 @@
+$break-small: 720px;
+
+.App {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  @media screen and (max-width: $break-small) {
+    flex-direction: column;
+  }
+
+  .demo-container {
+    margin: 20px;
+    width: 100%;
+    padding: 30px;
+  }
+}
