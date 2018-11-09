@@ -6032,10 +6032,10 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-lim-cache@^2.3.4:
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/lim-cache/-/lim-cache-2.3.4.tgz#250b99444768cc98a596c8bf1d5dca67b7399905"
-  integrity sha512-Pfk/gu84qMNG3cWrpLVszHsILVUVV4bgvMoP0zXan7InqXhbsD3ypvhGuarl6vpXyQMW8Pu736VIbeLgy/kdLw==
+lim-cache@^2.3.8:
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/lim-cache/-/lim-cache-2.3.8.tgz#a4095f8dd79d57c7cdff79ad4831d2fbf4046584"
+  integrity sha512-IYtCB/hzYdJQBy8CqrU/xPYedOujCHk4JPnvxumqrLutU+LrH3Xhl4TUiqMYun/cxUe8Zo3GESRSkQLGP+yeqg==
   dependencies:
     "@types/lodash" "^4.14.118"
     lodash "^4.17.11"

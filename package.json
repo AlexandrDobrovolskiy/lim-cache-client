@@ -6,7 +6,7 @@
     "@material-ui/core": "^3.4.0",
     "@material-ui/icons": "^3.0.1",
     "add": "^2.0.6",
-    "lim-cache": "^2.3.4",
+    "lim-cache": "^2.3.8",
     "node-sass": "^4.10.0",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
