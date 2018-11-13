@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <div className="App">
         <CssBaseline />
-        <Paper className="demo-container" elevation={2}>
+        <Paper className="demo-container" elevation={2} maxLimit={100 * 1024 * 1024}>
           <StorageDemo storage={cache} title="RAM cache"/>
         </Paper>
         <Paper className="demo-container" elevation={2}>
