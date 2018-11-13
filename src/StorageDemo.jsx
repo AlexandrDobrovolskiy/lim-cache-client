@@ -26,11 +26,13 @@ const IsJsonString = (str) => {
 class StorageDemo extends Component {
   static propTypes = {
     storage: PropTypes.object.isRequired,
+    maxLimit: PropTypes.number,
     title: PropTypes.string
   };
 
   static defaultProps = {
-    title: "RAM cache"
+    title: "RAM cache",
+    maxLimit: (10 * 1024 * 1024)  // 10MB
   };
 
   state = {
@@ -39,8 +41,16 @@ class StorageDemo extends Component {
   };
 
   handleLimitChange = e => {
-    const { storage } = this.props;
+    const { storage, maxLimit } = this.props;
     const { value } = e.target;
+    
+    if(value > maxLimit){
+      this.setState({limit: maxLimit})
+      storage.setLimit(maxLimit);
+      return;
+    }
+
+    this.setState({limit: value})
     storage.setLimit(value);
   };
 
@@ -71,7 +81,7 @@ class StorageDemo extends Component {
 
   render() {
     const { title, storage, classes } = this.props;
-    const { putData, putKey, removeKey } = this.state;
+    const { putData, putKey, removeKey, limit } = this.state;
 
     return (
       <Grid
@@ -90,10 +100,10 @@ class StorageDemo extends Component {
           <TextField
             label="Limit (Bytes)"
             className={classes.textField}
+            value={limit}
             onChange={this.handleLimitChange}
             variant="outlined"
             type="number"
-            defaultValue={storage.limit}
             InputLabelProps={{
               shrink: true
             }}
